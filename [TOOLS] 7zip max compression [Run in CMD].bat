@@ -1,0 +1,1 @@
+for /D %d in (*.*) do 7z a -t7z -m0=lzma2 -mx=9 -mfb=273 -md=256m -ms=on ".\%d.zip" ".\%d\*"

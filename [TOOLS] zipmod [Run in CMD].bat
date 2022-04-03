@@ -1,0 +1,1 @@
+for /D %d in (*.*) do 7z a -tzip -mx0 ".\%d.zipmod" ".\%d\*"
