@@ -1,4 +1,4 @@
-@FOR /R %%a IN (*.zip,*.7z,*.rar,*.tar,*.gz) DO @(
+@FOR /R %%a IN (*.zip,*.7z,*.rar,*.tar,*.gz,*.part1.exe) DO @(
     @if [%1] EQU [/y] (
         @"C:\Program Files\7-Zip\7z.exe" x "%%a" -o"%%~dpna" -aoa
     ) else if [%1] EQU [/yd] (
