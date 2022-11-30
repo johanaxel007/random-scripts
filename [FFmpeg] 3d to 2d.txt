@@ -1,0 +1,4 @@
+https://ffmpeg.org/ffmpeg-filters.html#stereo3d
+https://video.stackexchange.com/a/35088
+
+ffmpeg  -i "foo.mkv" -vf stereo3d=sbs2l:ml -c:a copy "bar.mp4"

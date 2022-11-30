@@ -1,2 +1,2 @@
 (for /f "delims=" %%A in ('dir /b /a-d *.mp4') do @echo file '%%A') > "list.txt"
-ffmpeg -safe 0 -f concat -i list.txt -c:v libsvtav1 -preset 5 -g 240 -crf 32 -rc 0 -svtav1-params passes=1 -c:a copy output_av1.mp4
+ffmpeg -safe 0 -f concat -i list.txt -c:v libsvtav1 -preset 5 -g 240 -crf 32 -rc 0 -svtav1-params passes=1 -c:a copy output_[av1_slow].mp4
