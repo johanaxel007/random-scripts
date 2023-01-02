@@ -1,0 +1,2 @@
+(for /f "delims=" %%A in ('dir /b /a-d *.mp4,*.mkv,*.mov,*.flv,*.avi,*.wmv,*.mpg,*.mpeg,*.m4v') do @echo file '%%A') > "list.txt"
+ffmpeg -safe 0 -f concat -i list.txt -filter:v fps=30 -c:v libx265 -preset veryslow -c:a copy output_[h265_veryslow].mp4
