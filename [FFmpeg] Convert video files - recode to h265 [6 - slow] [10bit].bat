@@ -1,1 +1,1 @@
-FOR /F "tokens=*" %%A IN ('dir /b /a-d *.mp4,*.mkv,*.mov,*.flv') DO ffmpeg -i "%%A" -pix_fmt yuv420p10le -c:v libx265 -preset slow -c:a copy "%%~nA [h265_slow_10bit].mp4"
+FOR /F "tokens=*" %%A IN ('dir /b /a-d *.mp4,*.mkv,*.mov,*.flv,*.avi,*.wmv,*.mpg,*.mpeg,*.m4v') DO ffmpeg -i "%%A" -pix_fmt yuv420p10le -c:v libx265 -preset slow -c:a copy "%%~nA [h265_slow_10bit].mp4"
