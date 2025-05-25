@@ -1,0 +1,1 @@
+(for /f "delims=" %%A in ('dir /b /a-d *.mp3,*.flac,*.m4a,*.wav') do @echo %%A) > "tracks.txt"

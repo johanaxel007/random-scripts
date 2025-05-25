@@ -1,0 +1,1 @@
+FOR /F "tokens=*" %%A IN ('dir /b /a-d *.mp4,*.mkv,*.mov,*.flv,*.avi,*.wmv,*.mpg,*.mpeg,*.m4v') DO ffmpeg -i "%%A" -c:v libx265 -preset medium -c:a copy "%%~nA [h265_medium].mp4"

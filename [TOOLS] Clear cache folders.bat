@@ -11,7 +11,7 @@ dotnet nuget locals --clear all
 echo:
 echo:
 echo --- Node NPM packages ---
-:: npm cache clean --force
-npm cache verify
+call npm cache clean --force
+call npm cache verify
 
 PAUSE
